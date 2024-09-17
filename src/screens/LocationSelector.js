@@ -26,7 +26,10 @@ const LocationSelector = ({navigation}) => {
     useEffect(() => {
         (async () => {
             const { status } = await Location.requestForegroundPermissionsAsync();
-            if (status !== "granted") return;
+            if (status !== "granted") {
+                alert("Permiso para acceder a la ubicación denegado");
+                return;
+              }
             const newLocation = await Location.getCurrentPositionAsync();
             setLocation({
                 latitude: newLocation.coords.latitude,

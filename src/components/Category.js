@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
  
     },
     text:{
-        fontSize:16
+        fontSize:15,
+        fontFamily:"Playfair"
     }
 })

@@ -78,7 +78,8 @@ const styles = StyleSheet.create({
         borderRadius:90
     },
     text:{
-      fontFamily:"Lobster"
+      fontFamily:"Lobster",
+      textAlign:"center"
     },
     buttonContainer:{
       flexDirection:"row",

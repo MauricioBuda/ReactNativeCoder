@@ -33,8 +33,8 @@ const Orders = () => {
         renderItem={({item})=> <OrderItem item={item}/>}
       />
 
-
       <SubmitButton title="Eliminar todas las órdenes" onPress={deleteOrders}/>
+      
     </View>
   )
 }
