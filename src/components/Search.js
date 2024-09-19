@@ -47,10 +47,10 @@ const Search = ({onSearch}) => {
             />
             <View style={styles.buttonContainer}>
                 <Pressable onPress={search}>
-                    <AntDesign name="search1" size={28} color="black" />
+                    <AntDesign name="search1" size={28} color={colors.color1} />
                 </Pressable>
                 <Pressable onPress={handleRemoveInput}>
-                    <MaterialIcons style={styles.icon} name="cancel" size={28} color="black" />
+                    <MaterialIcons style={styles.icon} name="cancel" size={28} color={colors.color1} />
                 </Pressable>
             </View>  
         </View>

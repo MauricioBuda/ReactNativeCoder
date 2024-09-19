@@ -27,7 +27,7 @@ const CartItem = ({item}) => {
 
 
       <Pressable onPress={()=>handleDeleteItem(item.id)}>
-          <Entypo name="trash" size={48} color="black" />
+          <Entypo name="trash" size={48} color="white" />
       </Pressable>
     </View>
   )

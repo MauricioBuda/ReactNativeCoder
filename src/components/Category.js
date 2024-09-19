@@ -33,6 +33,8 @@ const styles = StyleSheet.create({
     },
     text:{
         fontSize:15,
-        fontFamily:"Playfair"
+        fontFamily:"Playfair",
+        fontWeight:"bold",
+        color: "white"
     }
 })

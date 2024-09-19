@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { useGetOrderByUserQuery } from '../services/orders'
 import OrderItem from './OrderItem'
 import LoadingSpinner from '../components/LoadingSpinner'
+import { colors } from '../global/colors'
 
 const OrderDetail = ({route}) => {
 
@@ -31,7 +32,8 @@ const styles = StyleSheet.create({
   date:{
     textAlign:"center",
     marginTop:20,
-    fontSize:25,
-    fontFamily:"Lobster"
+    fontSize:22,
+    fontFamily:"Josefin",
+    color:colors.color2
   }
 })

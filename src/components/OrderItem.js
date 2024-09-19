@@ -12,10 +12,10 @@ const OrderItem = ({item}) => {
     <View style={styles.container}>
       <View style={styles.containerText}>
         <Text style={styles.date}>{item.createdAt}</Text>
-        <Text style={styles.total}>Total: {item.total} $</Text>
+        <Text style={styles.total}>Total: US$ {item.total} </Text>
       </View>
       <Pressable onPress={()=>navigation.navigate("OrderDetail",{id:item.id, date:item.createdAt})}>
-          <AntDesign name="search1" size={48} color="black" />
+          <AntDesign name="search1" size={48} color="#00000090" />
       </Pressable>
       
     </View>
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     },
     total:{
         fontSize:20,
-        fontWeight:"bold"
+        fontWeight:"bold",
+        color: colors.color2
     }
 })

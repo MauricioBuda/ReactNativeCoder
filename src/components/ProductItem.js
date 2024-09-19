@@ -28,14 +28,16 @@ const styles = StyleSheet.create({
         marginVertical:10,
         flexDirection:"row",
         alignItems:"center",
-        padding:10,
+        padding:8,
         width:"90%",
         marginHorizontal:"5%",
         gap:10,
         borderRadius:6
     },
     title:{
-        width:"70%"
+        width:"70%",
+        color:"white",
+        fontFamily:"Josefin"
     },
     titleMin:{
       fontSize:14
@@ -44,10 +46,10 @@ const styles = StyleSheet.create({
       fontSize:20
     },
     image:{
-        minWidth:80,
+        minWidth:60,
         width:"20vw",
         maxWidth:150,
-        minHeight:80,
+        minHeight:60,
         height:"20vw",
         maxHeight:150,
         borderRadius:6

@@ -35,8 +35,9 @@ const styles = StyleSheet.create({
       titleInput:{
         width:"90%",
         marginHorizontal:"5%",
-        fontSize:16,
-        fontFamily:"Josefin"
+        fontSize:18,
+        fontFamily:"Josefin",
+        color:"white"
       },
       error:{
         fontSize:16,

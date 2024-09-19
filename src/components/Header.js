@@ -23,7 +23,7 @@ const Header = ({title}) => {
     <View style={styles.container}>
       {route.name !== "Home" && route.name !== "Login" && route.name !== "Register"? 
       <Pressable style={styles.icon} onPress={()=>navigation.goBack()}>
-          <Ionicons name="arrow-undo-circle-outline" size={35} color="black" />
+          <Ionicons name="arrow-undo-circle-outline" size={35} color="white" />
       </Pressable>
       :
       null
@@ -31,7 +31,7 @@ const Header = ({title}) => {
       <Text style={styles.text}>{title}</Text>
       {idToken && 
       <Pressable onPress={onLogout} style={styles.logout}>
-        <Ionicons name="exit-outline" size={35} color="black" />
+        <Ionicons name="exit-outline" size={35} color="white" />
       </Pressable>}
     </View>
   )
@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
   },
   text:{
     fontSize:25,
-    fontFamily:'Josefin'
+    fontFamily:'Josefin',
+    color:"white"
   },
   icon:{
     position:"absolute",

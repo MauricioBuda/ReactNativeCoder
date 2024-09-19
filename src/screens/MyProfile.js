@@ -5,6 +5,7 @@ import { useGetUserQuery } from '../services/users'
 import { useSelector } from 'react-redux'
 import LoadingSpinner from '../components/LoadingSpinner'
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { colors } from '../global/colors'
 
 
 const MyProfile = ({navigation}) => {
@@ -79,7 +80,10 @@ const styles = StyleSheet.create({
     },
     text:{
       fontFamily:"Lobster",
-      textAlign:"center"
+      textAlign:"center",
+      color:colors.color2,
+      fontSize:18,
+      marginHorizontal:8
     },
     buttonContainer:{
       flexDirection:"row",

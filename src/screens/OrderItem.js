@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
         justifyContent:"space-evenly",
     },
     text:{
-        fontFamily:"Lobster",
-        fontSize:18
+        fontFamily:"Josefin",
+        fontSize:18,
+        color:"white"
     }
 })

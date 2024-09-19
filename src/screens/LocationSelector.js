@@ -25,18 +25,24 @@ const LocationSelector = ({navigation}) => {
 
     useEffect(() => {
         (async () => {
+          try {
             const { status } = await Location.requestForegroundPermissionsAsync();
-            if (status !== "granted") {
-                alert("Permiso para acceder a la ubicación denegado");
-                return;
-              }
+            if (status !== 'granted') {
+              console.log('No aceptó el permiso');
+              alert('Permiso denegado!')
+              return;
+            }
             const newLocation = await Location.getCurrentPositionAsync();
             setLocation({
-                latitude: newLocation.coords.latitude,
-                longitude: newLocation.coords.longitude
+              latitude: newLocation.coords.latitude,
+              longitude: newLocation.coords.longitude
             });
+          } catch (error) {
+            console.error("Error getting location:", error);
+            alert('SIN PERMISO', error)
+          }
         })();
-    }, []);
+      }, []);
 
     useEffect(() => {
         (async () => {

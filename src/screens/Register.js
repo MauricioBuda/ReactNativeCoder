@@ -93,7 +93,7 @@ const Register = ({navigation}) => {
                     isSecure={viewPass}
                     error = {errorPassword}
                 />
-                <AntDesign onPress={handleChangeViewPass} style={styles.eye} name="eye" size={24} color="black" />
+                <AntDesign onPress={handleChangeViewPass} style={styles.eye} name="eye" size={26} color="white" />
             </View>
             <View style={styles.inputContainer}>
                 <InputForm
@@ -103,10 +103,12 @@ const Register = ({navigation}) => {
                     isSecure={viewConfirmPass}
                     error={errorConfirmPassword}
                 />
-                <AntDesign onPress={handleChangeViewConfirmPass} style={styles.eye} name="eye" size={24} color="black" />
+                <AntDesign onPress={handleChangeViewConfirmPass} style={styles.eye} name="eye" size={26} color="white" />
             </View>
 
-            <SubmitButton onPress={onSubmit} title="Registrarme"/>
+            <View style={styles.registerContainer}>
+                <SubmitButton onPress={onSubmit} title="Registrarme"/>
+            </View>
             <Text style={styles.sub}>¿Ya tenés una cuenta?</Text>
             <Pressable onPress={()=> navigation.navigate("Login")} >
                 <Text style={styles.subLink}>Incio de sesion</Text>
@@ -138,13 +140,16 @@ const styles = StyleSheet.create({
         fontFamily:"Lobster"
       },
       sub:{
-        fontSize:14,
-        fontFamily:"Josefin"
-      },
-      subLink:{
+        marginTop:15,
         fontSize:14,
         fontFamily:"Josefin",
-        color:"blue"
+        color:"white"
+      },
+      subLink:{
+        fontSize:18,
+        fontFamily:"Josefin",
+        color:"blue",
+        color: colors.color2
       },
       inputContainer:{
         flexDirection:"row",
@@ -154,5 +159,11 @@ const styles = StyleSheet.create({
         position:"absolute",
         right:25,
         top:30
+      },
+      registerContainer:{
+        borderWidth:1,
+        borderColor:"white",
+        borderRadius:60,
+        padding:3
       }
 })
