@@ -16,7 +16,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/splash2.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.mauriciobuda.ProyectoCoderBuda",

@@ -2,6 +2,7 @@ import { FlatList, StyleSheet } from 'react-native'
 import Category from './Category'
 import { useGetCategoriesQuery } from '../services/shop'
 import LoadingSpinner from './LoadingSpinner'
+import { useEffect } from 'react'
 
 
 const Categories = () => {
