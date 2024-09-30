@@ -28,12 +28,14 @@ const Orders = () => {
   return (
     <View>
       <FlatList
+        style={styles.flat}
         data={orders}
         keyExtractor={(item)=> item.id}
         renderItem={({item})=> <OrderItem item={item}/>}
       />
-
-      <SubmitButton title="Eliminar todas las órdenes" onPress={deleteOrders}/>
+      <View style={styles.buttonContainer}>
+        <SubmitButton title="Eliminar todas las órdenes" onPress={deleteOrders}/>   
+      </View>
       
     </View>
   )
@@ -41,4 +43,14 @@ const Orders = () => {
 
 export default Orders
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  buttonContainer:{
+    position:"absolute",
+    top: "90%",
+    width:"70%",
+    marginHorizontal:"15%",
+  },
+  flat:{
+    marginBottom:70
+  }
+})

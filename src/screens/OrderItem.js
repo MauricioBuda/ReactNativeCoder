@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     text:{
         fontFamily:"Josefin",
         fontSize:18,
-        color:"white"
+        color:"white",
+        width:"90%"
     }
 })
