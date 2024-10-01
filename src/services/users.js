@@ -17,25 +17,34 @@ export const usersApi = createApi({
             invalidatesTags:["userImage"]
         }),
 
-
-        postUserLocation:builder.mutation({
-            query:({localId,userLocation})=> ({
-                url:`users/${localId}/locations.json`,
-                method:"POST",
-                body:userLocation
+        
+        putNameProfile:builder.mutation({
+            query:({nameProfile,localId})=> ({
+                url:`users/${localId}.json`,
+                method:"PUT",
+                body:{nameProfile}
             }),
-            invalidatesTags:["userLocation"]
         }),
 
 
-        putUserLocation: builder.mutation({
-            query: ({ localId, userLocation }) => ({
-                url: `users/${localId}/locations.json`,
-                method: "PUT",
-                body: userLocation
-            }),
-            invalidatesTags: ["userLocation"]
-        }),
+        // postUserLocation:builder.mutation({
+        //     query:({localId,userLocation})=> ({
+        //         url:`users/${localId}/locations.json`,
+        //         method:"POST",
+        //         body:userLocation
+        //     }),
+        //     invalidatesTags:["userLocation"]
+        // }),
+
+
+        // putUserLocation: builder.mutation({
+        //     query: ({ localId, userLocation }) => ({
+        //         url: `users/${localId}/locations.json`,
+        //         method: "PUT",
+        //         body: userLocation
+        //     }),
+        //     invalidatesTags: ["userLocation"]
+        // }),
 
 
         getUser:builder.query({
